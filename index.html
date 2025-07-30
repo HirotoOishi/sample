@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイマー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>タイマー</h1>
+        
+        <div class="timer-display">
+            <div class="time-circle">
+                <div class="progress-ring">
+                    <svg width="280" height="280">
+                        <circle
+                            class="progress-ring-circle"
+                            stroke="#e0e0e0"
+                            stroke-width="8"
+                            fill="transparent"
+                            r="130"
+                            cx="140"
+                            cy="140"/>
+                        <circle
+                            class="progress-ring-progress"
+                            stroke="#4CAF50"
+                            stroke-width="8"
+                            fill="transparent"
+                            r="130"
+                            cx="140"
+                            cy="140"/>
+                    </svg>
+                    <div class="time-text">
+                        <span id="timeDisplay">05:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="time-input">
+                <div class="input-group">
+                    <label for="minutes">分</label>
+                    <input type="number" id="minutes" min="0" max="59" value="5">
+                </div>
+                <div class="input-group">
+                    <label for="seconds">秒</label>
+                    <input type="number" id="seconds" min="0" max="59" value="0">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="startBtn" class="btn btn-primary">開始</button>
+                <button id="pauseBtn" class="btn btn-secondary" disabled>一時停止</button>
+                <button id="resetBtn" class="btn btn-tertiary">リセット</button>
+            </div>
+        </div>
+
+        <div class="preset-buttons">
+            <h3>クイック設定</h3>
+            <div class="preset-grid">
+                <button class="preset-btn" data-minutes="1" data-seconds="0">1分</button>
+                <button class="preset-btn" data-minutes="3" data-seconds="0">3分</button>
+                <button class="preset-btn" data-minutes="5" data-seconds="0">5分</button>
+                <button class="preset-btn" data-minutes="10" data-seconds="0">10分</button>
+                <button class="preset-btn" data-minutes="15" data-seconds="0">15分</button>
+                <button class="preset-btn" data-minutes="25" data-seconds="0">25分</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
